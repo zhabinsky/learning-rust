@@ -1,3 +1,8 @@
+# sources:
+https://doc.rust-lang.org/rust-by-example
+https://www.youtube.com/watch?v=zF34dRivLOw
+
+
 # Things to remember
 
 - [macros](https://doc.rust-lang.org/rust-by-example/macros.html)

@@ -1,0 +1,1 @@
+/Users/vladislavzhabinsky/coding/learn-rust/crash-course/target/debug/crash-course: /Users/vladislavzhabinsky/coding/learn-rust/crash-course/src/main.rs /Users/vladislavzhabinsky/coding/learn-rust/crash-course/src/strings.rs

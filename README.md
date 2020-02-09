@@ -2,7 +2,7 @@
 
 ## What's this repo for?
 
-Here I will store my RUST projects for as long as I am learning and experimenting with it on a low scale. Here I will collect all the theoretical stuff I write down while learning.
+Here I will store my RUST projects for as long as I am learning and experimenting with it on a low scale. Here I will collect all the theoretical stuff I write down while learning and any useful resources or examples.
 
 My ambition to try out going into the wild with a lower level language was hugely influences by this particular [post](https://levelup.gitconnected.com/intro-to-web-programming-in-rust-for-nodejs-developers-1a9c048c4de1). Where it said:
 
