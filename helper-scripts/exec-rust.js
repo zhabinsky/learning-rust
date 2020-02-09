@@ -1,5 +1,5 @@
 /** 
- * Helper script that
+ *  # Helper script that
  * 
  * - compiles rust file binary
  * - executes it
