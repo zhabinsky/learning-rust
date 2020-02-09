@@ -1,0 +1,11 @@
+{
+  "name": "docs-examples",
+  "version": "1.0.0",
+  "description": "scripts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node helper-scripts/just-execute"
+  },
+  "author": "",
+  "license": "ISC"
+}
