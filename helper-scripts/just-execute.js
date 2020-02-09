@@ -7,7 +7,9 @@
  * 
  */
 
-console.clear ();
+const source = process.argv[2];
+const currentDir = process.env.INIT_CWD;
+// console.clear ();
 const {exec: terminal} = require ('child_process');
 
 function exec (command) {
@@ -23,14 +25,16 @@ function exec (command) {
 }
 
 (async () => {
-  const source = process.argv[2];
-  const currentDir = process.env.INIT_CWD;
-
   if (!source) throw Error ('Please specify source');
 
-  const sourceParts = source.split ('.');
+  const sourceParts = source
+    .replace ('^\.\/', '')
+    .split ('.')
+    .filter (e => e.length > 0);
   const sourceExtension = sourceParts[1];
-  const binaryName = sourceParts[0].replace ('^\.?\/?', '');
+  const pathParts = sourceParts[0].split ('/');
+  const binaryName = pathParts[pathParts.length - 1];
+
   if (sourceExtension !== 'rs') throw Error ('Not a rust file');
 
   const commands = [
@@ -43,7 +47,6 @@ function exec (command) {
 
   const rustOutput = await exec (compileExecDispose);
 
-  console.clear ();
-  console.log (['', ...commands].join ('\n-> '), '\n');
+  console.log (commands.map (e => `> ${e}`).join ('\n'), '\n');
   console.log (rustOutput);
 }) ();
