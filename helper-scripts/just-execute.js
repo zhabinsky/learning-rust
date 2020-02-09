@@ -6,10 +6,8 @@
  * - deletes the binary
  * 
  */
-
 const source = process.argv[2];
 const currentDir = process.env.INIT_CWD;
-// console.clear ();
 const {exec: terminal} = require ('child_process');
 
 function exec (command) {
@@ -39,14 +37,11 @@ function exec (command) {
 
   const commands = [
     `cd ${currentDir}`,
-    `rustc ${source}`,
-    `./${binaryName}`,
-    `rm ./${binaryName}`,
+    `rustc ${source} && ./${binaryName} && rm ./${binaryName}`,
+    ``,
   ];
+
   const compileExecDispose = commands.join ('\n');
-
-  const rustOutput = await exec (compileExecDispose);
-
   console.log (commands.map (e => `> ${e}`).join ('\n'), '\n');
-  console.log (rustOutput);
+  console.log (await exec (compileExecDispose));
 }) ();
