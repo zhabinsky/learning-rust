@@ -4,7 +4,7 @@
   "description": "scripts",
   "main": "index.js",
   "scripts": {
-    "start": "node helper-scripts/just-execute"
+    "start": "node helper-scripts/exec-rust"
   },
   "author": "",
   "license": "ISC"
